@@ -9,7 +9,7 @@ Moises Urias 13015
 package hojadetrabajo4;
 
 /**
- *
+ *jkl
  * @author Irene
  */
 public class EncadenadaDoble<E> extends AbstractLista<E> {
