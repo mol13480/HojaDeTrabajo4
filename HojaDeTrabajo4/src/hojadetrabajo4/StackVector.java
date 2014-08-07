@@ -15,7 +15,7 @@ import java.util.Vector;
  *
  * @author Irene
  */
-public class StackVector<E> implements Pila<E>{
+public class StackVector<E> extends AbstractPila<E>{
     
     protected Vector<E> data;
 
@@ -48,22 +48,12 @@ public class StackVector<E> implements Pila<E>{
     {
         return data.get(size() - 1);
     }
-
-    @Override
-    public boolean empty() 
-    // post: returns true if and only if the stack is empty
-    {
-        return size() == 0;
-    }
-
     @Override
     public int size() 
     // post: returns the number of elements in the stack
     {
         return data.size();
     }
-    
-    
     /*BORRAR*/
     public void clear()
     {

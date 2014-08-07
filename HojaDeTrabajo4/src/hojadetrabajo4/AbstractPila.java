@@ -9,10 +9,20 @@ Moises Urias 13015
 
 package hojadetrabajo4;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Irene
  */
-public class AbstractPila {
-    
+public abstract class AbstractPila<E> implements Pila<E>{
+   
+    public AbstractPila(){
+        
+    } 
+    public boolean empty()
+    // post: returns true if and only if the stack is empty
+    {
+            return size() == 0;
+    }
 }

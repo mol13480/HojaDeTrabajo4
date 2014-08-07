@@ -25,7 +25,7 @@ public class HojaDeTrabajo4 {
      */
     public static void main(String[] args) {
         
-        int opcion = Integer.parseInt(JOptionPane.showInputDialog("Elija la implementacion: 1. Listas encadenadas  2. Stack"));
+        int opcion = Integer.parseInt(JOptionPane.showInputDialog("Elija la implementacion: 1. Listas encadenadas  2. StackArrayList  3.StackVector"));
         
         // si el usuario eligio listas encadenadas 
         if(opcion==1){
@@ -44,28 +44,21 @@ public class HojaDeTrabajo4 {
                 
             }
         }
-        //si el usuario eligio Stack 
-        else{
-            int opcion2 = Integer.parseInt(JOptionPane.showInputDialog("1.ArrayList  2.StackVector  3.StackList"));
-            //si el usuario eligio arrayList
-            if(opcion2==1){
-                Pila<String> miStack= new StackArrayList<String>();
-                leerArchivo(miStack);
-            }
-            //si el usuario eligio StackVector 
-            if(opcion2==2){
-                Pila<String> miStack= new StackVector<String>();
-                leerArchivo(miStack);
-            }
-            //si el usuario eligio StackList 
-            if(opcion==3){
-                Pila<String> miStack= new StackList<String>();
-                leerArchivo(miStack);
-            }
+       
+        if(opcion==2){
+            Pila<String> miStack= new StackArrayList<String>();
+            leerArchivo(miStack);
         }
+        //si el usuario eligio StackVector 
+        if(opcion==3){
+            Pila<String> miStack= new StackVector<String>();
+            leerArchivo(miStack);
+        }
+           
+    }
         
         // TODO code application logic here
-    }
+    
     //metodo para leer el archivo de texto 
     public static void leerArchivo(Pila<String> miStack){
     /*Declaracion de variables*/

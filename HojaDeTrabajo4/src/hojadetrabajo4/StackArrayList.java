@@ -11,12 +11,12 @@ package hojadetrabajo4;
 
 import java.util.ArrayList;
 
-public class StackArrayList<E> implements Pila<E>
+public class StackArrayList<E> extends AbstractPila<E>
 {
 	protected ArrayList<E> data;
 
 	public StackArrayList()
-	// post: constructs a new, empty stack
+	//post: constructs a new, empty stack
 	{
 		data = new ArrayList<E>();
 	}
@@ -46,11 +46,5 @@ public class StackArrayList<E> implements Pila<E>
 	// post: returns the number of elements in the stack
 	{
 		return data.size();
-	}
-  
-	public boolean empty()
-	// post: returns true if and only if the stack is empty
-	{
-		return size() == 0;
 	}
 }
