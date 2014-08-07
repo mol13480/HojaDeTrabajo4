@@ -29,7 +29,7 @@ public class StackFactory<E> {
     public Pila<E> getStack(int entry)
     {
         /*La implementacion que se va a devolver*/
-        Pila<String> implementacion = null;
+        Pila<E> implementacion = null;
         
         /*Si se selecciona el numero 1, entonces se devuelve la implementacion
         * StackArrayList*/
