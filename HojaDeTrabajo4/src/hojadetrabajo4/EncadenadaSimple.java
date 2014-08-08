@@ -10,8 +10,9 @@ Moises Urias 13015
 package hojadetrabajo4;
 
 /**
- *
- * @author Irene
+ * Esta clase se utiliza al momento de implementar una lista simplemente 
+ * encadenada.
+ * @author Irene Molina
  */
 public class EncadenadaSimple<E> extends AbstractLista<E> {
     
