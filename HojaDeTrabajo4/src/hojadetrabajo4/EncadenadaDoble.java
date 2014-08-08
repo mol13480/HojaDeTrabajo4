@@ -31,7 +31,7 @@ public class EncadenadaDoble<E> extends AbstractLista<E> {
         // fix tail, if necessary
         if (tail == null) tail = head;
         count++;
-}
+    }
 
 
     public void addLast(E value)

@@ -22,26 +22,26 @@ public class EncadenadaDobleTest {
     public EncadenadaDobleTest() {
     }
     
-    //@BeforeClass
+    @BeforeClass
     public static void setUpClass() {
     }
     
-    //@AfterClass
+    @AfterClass
     public static void tearDownClass() {
     }
     
-    //@Before
+    @Before
     public void setUp() {
     }
     
-    //@After
+    @After
     public void tearDown() {
     }
 
     /**
      * Test of addFirst method, of class EncadenadaDoble.
      */
-    //@Test
+    @Test
     public void testAddFirst() {
         System.out.println("addFirst");
         Object value = null;
@@ -56,7 +56,7 @@ public class EncadenadaDobleTest {
     /**
      * Test of addLast method, of class EncadenadaDoble.
      */
-    //@Test
+    @Test
     public void testAddLast() {
         System.out.println("addLast");
         Object value = null;
@@ -71,7 +71,7 @@ public class EncadenadaDobleTest {
     /**
      * Test of removeLast method, of class EncadenadaDoble.
      */
-    //@Test
+    @Test
     public void testRemoveLast() {
         System.out.println("removeLast");
         EncadenadaDoble instance = new EncadenadaDoble();
@@ -85,7 +85,7 @@ public class EncadenadaDobleTest {
     /**
      * Test of size method, of class EncadenadaDoble.
      */
-    //@Test
+    @Test
     public void testSize() {
         System.out.println("size");
         EncadenadaDoble instance = new EncadenadaDoble();
