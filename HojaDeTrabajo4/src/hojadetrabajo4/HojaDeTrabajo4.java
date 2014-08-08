@@ -90,13 +90,13 @@ public class HojaDeTrabajo4 {
         {
             /*Se crea un objeto que permite abrir el archivo de texto*/
             AbrirJFileChooser abrirArchivo = new AbrirJFileChooser();
-            //abrirArchivo.Abrir(); /*Se slecciona el archivo de texto*/
-            //String ruta =abrirArchivo.getPath(); /*Se obtiene la ruta del
-                                                    //archivo de texto*/
+            abrirArchivo.Abrir(); /*Se slecciona el archivo de texto*/
+            String ruta =abrirArchivo.getPath(); /*Se obtiene la ruta del
+                                                    archivo de texto*/
            
             
             /*Lectura del archivo*/
-            fr = new FileReader("datos.txt");
+            fr = new FileReader(ruta);
             br = new BufferedReader(fr);
             
             while ((micadena = br.readLine())!=null)

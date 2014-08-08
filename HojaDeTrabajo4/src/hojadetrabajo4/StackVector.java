@@ -31,7 +31,7 @@ public class StackVector<E> extends AbstractPila<E>{
         this.data = new Vector<E>();
     }
     
-    @Override
+    //@Override
     public void push(E item) 
     // post: the value is added to the stack
     //          will be popped next if no intervening push
@@ -39,7 +39,7 @@ public class StackVector<E> extends AbstractPila<E>{
         data.addElement(item);
     }
 
-    @Override
+    //@Override
     public E pop() 
     // pre: stack is not empty
     // post: most recently pushed item is removed and returned
@@ -47,14 +47,14 @@ public class StackVector<E> extends AbstractPila<E>{
         return data.remove(size() -1);
     }
 
-    @Override
+    //@Override
     public E peek() 
     // pre: stack is not empty
     // post: top value (next to be popped) is returned
     {
         return data.get(size() - 1);
     }
-    @Override
+    //@Override
     public int size() 
     // post: returns the number of elements in the stack
     {
