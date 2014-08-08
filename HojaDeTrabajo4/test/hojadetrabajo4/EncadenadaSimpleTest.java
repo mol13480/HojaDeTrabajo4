@@ -22,26 +22,26 @@ public class EncadenadaSimpleTest {
     public EncadenadaSimpleTest() {
     }
     
-    @BeforeClass
+    //@BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterClass
+    //@AfterClass
     public static void tearDownClass() {
     }
     
-    @Before
+    //@Before
     public void setUp() {
     }
     
-    @After
+    //@After
     public void tearDown() {
     }
 
     /**
      * Test of size method, of class Circular.
      */
-    @Test
+    //@Test
     public void testSize() {
         System.out.println("size");
         Circular instance = new Circular();
@@ -59,7 +59,7 @@ public class EncadenadaSimpleTest {
     /**
      * Test of addFirst method, of class Circular.
      */
-    @Test
+    //@Test
     public void testAddFirst() {
         System.out.println("addFirst");
         Object value = null;
@@ -76,7 +76,7 @@ public class EncadenadaSimpleTest {
     /**
      * Test of removeFirst method, of class EncadenadaSimple.
      */
-    @Test
+    //@Test
     public void testRemoveFirst() {
         System.out.println("removeFirst");
         EncadenadaSimple instance = new EncadenadaSimple();
@@ -94,7 +94,7 @@ public class EncadenadaSimpleTest {
     /**
      * Test of addLast method, of class EncadenadaSimple.
      */
-    @Test
+    //@Test
     public void testAddLast() {
         System.out.println("addLast");
         Object value = null;
@@ -109,7 +109,7 @@ public class EncadenadaSimpleTest {
     /**
      * Test of removeLast method, of class EncadenadaSimple.
      */
-    @Test
+    //@Test
     public void testRemoveLast() {
         System.out.println("removeLast");
         EncadenadaSimple instance = new EncadenadaSimple();
@@ -117,8 +117,9 @@ public class EncadenadaSimpleTest {
         instance.addFirst(String.valueOf(12));
         instance.addLast(String.valueOf(15));
         Object result = String.valueOf(instance.removeLast());
+        Object result2 = String.valueOf(instance.removeFirst());
         Object expResult = String.valueOf(15);
-        System.out.println("add first: 10, add first: 12, add last: 15 / remove last:"+result);
+        System.out.println("add first: 10, add first: 12, add last: 15 / remove last:"+result+"/remove first:"+result2);
     }
     
 }

@@ -22,26 +22,26 @@ public class CircularTest {
     public CircularTest() {
     }
     
-    @BeforeClass
+    //@BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterClass
+    //@AfterClass
     public static void tearDownClass() {
     }
     
-    @Before
+    //@Before
     public void setUp() {
     }
     
-    @After
+    //@After
     public void tearDown() {
     }
 
     /**
      * Test of addFirst method, of class Circular.
      */
-    @Test
+    //@Test
     public void testAddFirst() {
         System.out.println("addFirst");
         Object value = null;
@@ -58,7 +58,7 @@ public class CircularTest {
     /**
      * Test of addLast method, of class Circular.
      */
-    @Test
+    //@Test
     public void testAddLast() {
         System.out.println("addLast");
         Object value = null;
@@ -76,7 +76,7 @@ public class CircularTest {
     /**
      * Test of removeLast method, of class Circular.
      */
-    @Test
+    //@Test
     public void testRemoveLast() {
         System.out.println("removeLast");
         Circular instance = new Circular();
@@ -93,7 +93,7 @@ public class CircularTest {
     /**
      * Test of size method, of class Circular.
      */
-    @Test
+    //@Test
     public void testSize() {
         System.out.println("size");
         Circular instance = new Circular();

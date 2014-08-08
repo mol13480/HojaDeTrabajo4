@@ -22,26 +22,26 @@ public class StackArrayListTest {
     public StackArrayListTest() {
     }
     
-    @BeforeClass
+    //@BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterClass
+    //@AfterClass
     public static void tearDownClass() {
     }
     
-    @Before
+    //@Before
     public void setUp() {
     }
     
-    @After
+    //@After
     public void tearDown() {
     }
 
     /**
      * Test of pop method, of class StackVector.
      */
-    @Test
+    //@Test
     public void testPop() {
         System.out.println("pop");
         StackArrayList instance = new StackArrayList();
@@ -56,7 +56,7 @@ public class StackArrayListTest {
     /**
      * Test of peek method, of class StackVector.
      */
-    @Test
+    //@Test
     public void testPeek() {
         System.out.println("peek");
         StackArrayList instance = new StackArrayList();
@@ -71,7 +71,7 @@ public class StackArrayListTest {
     /**
      * Test of empty method, of class StackVector.
      */
-    @Test
+    //@Test
     public void testEmpty() {
         System.out.println("empty");
         StackArrayList instance = new StackArrayList();
@@ -90,7 +90,7 @@ public class StackArrayListTest {
     /**
      * Test of size method, of class StackVector.
      */
-    @Test
+    //@Test
     public void testSize() {
         System.out.println("size");
         StackArrayList instance = new StackArrayList();

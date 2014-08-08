@@ -22,74 +22,78 @@ public class EncadenadaDobleTest {
     public EncadenadaDobleTest() {
     }
     
-    @BeforeClass
+    //@BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterClass
+    //@AfterClass
     public static void tearDownClass() {
     }
     
-    @Before
+    //@Before
     public void setUp() {
     }
     
-    @After
+    //@After
     public void tearDown() {
     }
 
     /**
      * Test of addFirst method, of class EncadenadaDoble.
      */
-    @Test
+    //@Test
     public void testAddFirst() {
         System.out.println("addFirst");
         Object value = null;
         EncadenadaDoble instance = new EncadenadaDoble();
-        instance.addFirst(value);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.addFirst(String.valueOf(10));
+        instance.addFirst(String.valueOf(15));
+        Object result = String.valueOf(instance.removeLast());
+        Object expResult = String.valueOf(15);
+        System.out.println("add first: 10, add first: 15 / remove last:"+result);
     }
 
     /**
      * Test of addLast method, of class EncadenadaDoble.
      */
-    @Test
+    //@Test
     public void testAddLast() {
         System.out.println("addLast");
         Object value = null;
         EncadenadaDoble instance = new EncadenadaDoble();
-        instance.addLast(value);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.addFirst(String.valueOf(10));
+        instance.addLast(String.valueOf(15));
+        Object result = String.valueOf(instance.removeLast());
+        Object expResult = String.valueOf(15);
+        System.out.println("add first: 10, add last: 15 / remove last:"+result);
     }
 
     /**
      * Test of removeLast method, of class EncadenadaDoble.
      */
-    @Test
+    //@Test
     public void testRemoveLast() {
         System.out.println("removeLast");
         EncadenadaDoble instance = new EncadenadaDoble();
-        Object expResult = null;
-        Object result = instance.removeLast();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.addFirst(String.valueOf(10));
+        instance.addLast(String.valueOf(15));
+        Object result = String.valueOf(instance.removeLast());
+        Object expResult = String.valueOf(15);
+        System.out.println("add first: 10, add last: 15 / remove last:"+result);
     }
 
     /**
      * Test of size method, of class EncadenadaDoble.
      */
-    @Test
+    //@Test
     public void testSize() {
         System.out.println("size");
         EncadenadaDoble instance = new EncadenadaDoble();
-        int expResult = 0;
-        int result = instance.size();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.addFirst(String.valueOf(10));
+        instance.addLast(String.valueOf(15));
+        Object result = String.valueOf(instance.size());
+        Object expResult = String.valueOf(2);
+        System.out.println("add first: 10, add last: 15 / size:"+result);
     }
     
 }
