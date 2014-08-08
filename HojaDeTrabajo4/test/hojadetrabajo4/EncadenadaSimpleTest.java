@@ -84,8 +84,9 @@ public class EncadenadaSimpleTest {
         instance.addFirst(String.valueOf(20));
         instance.addLast(String.valueOf(15));
         Object result = String.valueOf(instance.removeFirst());
+        Object result2 = String.valueOf(instance.removeLast());
         Object expResult = String.valueOf(10);
-        System.out.println("add first: 10, add first: 20, add last: 15 / RemoveFirst:"+result);
+        System.out.println("add first: 10, add first: 20, add last: 15 / RemoveFirst:"+result+" RemoveLast:"+result2);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
