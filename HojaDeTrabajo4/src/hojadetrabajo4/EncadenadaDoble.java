@@ -50,7 +50,9 @@ public class EncadenadaDoble<E> extends AbstractLista<E> {
     // pre: list is not empty
     // post: removes value from tail of list
     {
+        
         DoubleLinkedNode<E> temp = tail;
+        
         tail = tail.previous();
         if (tail == null) {
             head = null;
