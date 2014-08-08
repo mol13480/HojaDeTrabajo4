@@ -21,13 +21,13 @@ public class ListFactory<E>{
         * Encadenada simple*/
         if (entry == 1)
         {
-            
+            implementacion = EncadenadaSimple.encadenadaSimple;
         }
         /*Si se selecciona el numero 2, entonces se devuelve la implementacion
         * Encadenada doble*/
         else if(entry == 2)
         {
-            
+            implementacion = EncadenadaDoble.encadenadaDoble;
         }
         /*Si se selecciona el numero 3, entonces se devuelve la implementacion
         * Circular*/

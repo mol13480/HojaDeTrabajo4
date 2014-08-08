@@ -68,13 +68,10 @@ public class StackList<E> extends AbstractPila<E>{
         // TODO code application logic here
     }
 
-    private boolean usado = false;
+    //private boolean usado = false;
     @Override
     public void push(E item) {
-        if (usado == false)
-            implementacion.addFirst(item);
-        else
-            implementacion.addLast(item);
+       implementacion.addLast(item);
     }
 
     @Override
@@ -82,14 +79,16 @@ public class StackList<E> extends AbstractPila<E>{
         return implementacion.removeLast();
     }
 
-    @Override
-    public E peek() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return implementacion.size();
+    }
+
+    @Override
+    public E peek() {
+        throw new UnsupportedOperationException("YOLO"); //To change body of generated methods, choose Tools | Templates.
     }
 
     

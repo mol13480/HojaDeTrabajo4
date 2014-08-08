@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Universidad del Valle de Guatemala
+Hoja de Trabajo 3 
+Irene Molina 13480
+Moises Urias 13015
  */
 
 package hojadetrabajo4;
@@ -34,6 +35,11 @@ public class DoubleLinkedNode<E> {
    // post: returns reference to next value in list
     {
       return nextElement;
+    }
+    public DoubleLinkedNode<E> previous()
+   // post: returns reference to previous value in list
+    {
+      return previousElement;
     }
 
     public void setNext(DoubleLinkedNode<E> next)

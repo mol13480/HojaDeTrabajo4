@@ -2,9 +2,9 @@
 Universidad del Valle de Guatemala
 Hoja de Trabajo 3 
 Irene Molina 13480
-Jorge Garcia 13175
 Moises Urias 13015
  */
+//obtenido de Java Structures
 
 
 package hojadetrabajo4;
@@ -14,6 +14,8 @@ package hojadetrabajo4;
  * @author Irene
  */
 public class EncadenadaSimple<E> extends AbstractLista<E> {
+    
+    public static final EncadenadaSimple encadenadaSimple = new EncadenadaSimple();
     protected int count; // list size
     protected Node<E> head; // ref. to first element
 
@@ -81,22 +83,20 @@ public class EncadenadaSimple<E> extends AbstractLista<E> {
         // pre: !isEmpty()
         // post: returns and removes value from tail of list
     {
-        if (head==null){
-            System.out.println("No hay elementos en la lista"); 
+        Node <E> finger = head; 
+        Node <E> previous = null; 
+        while (finger.next() != null){
+            previous = finger; 
+            finger = finger.next();
         }
-        Node current = head; 
-        Node previous = null; 
-        while (current.next() != null){
-            previous = current; 
-            current = current.next();
-        }
-        if(previous != null){
-            previous.setNext(null); 
+        if(previous == null){
+            head = null; 
         }
         else{
-            head= null; 
+            previous.setNext(null);
         }
-        return head.value(); 
+        count --; 
+        return finger.value(); 
        
     }
     

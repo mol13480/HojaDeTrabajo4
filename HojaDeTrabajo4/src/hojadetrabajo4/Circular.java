@@ -17,7 +17,7 @@ public class Circular<E> extends AbstractLista<E> {
     protected Node<E> tail; 
     protected int count;
     
-    public static final Circular<String> circular = new Circular();
+    public static final Circular circular = new Circular();
 
     public Circular()
     // pre: constructs a new circular list

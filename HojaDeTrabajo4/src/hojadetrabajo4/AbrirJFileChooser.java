@@ -22,7 +22,7 @@ public class AbrirJFileChooser extends JFrame {
     }
    
     public void Abrir() {
-        JFileChooser elegir = new JFileChooser();
+        JFileChooser elegir = new JFileChooser("datos.txt");
         int opcion = elegir.showOpenDialog(botonFile);
 
         //Si presionamos el boton ABRIR en pathArchivo obtenemos el path del archivo

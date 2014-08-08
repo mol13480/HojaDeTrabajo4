@@ -2,17 +2,17 @@
 Universidad del Valle de Guatemala
 Hoja de Trabajo 3 
 Irene Molina 13480
-Jorge Garcia 13175
 Moises Urias 13015
  */
 
 package hojadetrabajo4;
 
 /**
- *
+ *jkl
  * @author Irene
  */
 public class EncadenadaDoble<E> extends AbstractLista<E> {
+    public static final EncadenadaDoble encadenadaDoble = new EncadenadaDoble();
     protected int count;
     protected DoubleLinkedNode<E> head;
     protected DoubleLinkedNode<E> tail;
@@ -32,7 +32,7 @@ public class EncadenadaDoble<E> extends AbstractLista<E> {
         // fix tail, if necessary
         if (tail == null) tail = head;
         count++;
-}
+    }
 
 
     public void addLast(E value)
@@ -51,7 +51,9 @@ public class EncadenadaDoble<E> extends AbstractLista<E> {
     // pre: list is not empty
     // post: removes value from tail of list
     {
+        
         DoubleLinkedNode<E> temp = tail;
+        
         tail = tail.previous();
         if (tail == null) {
             head = null;
