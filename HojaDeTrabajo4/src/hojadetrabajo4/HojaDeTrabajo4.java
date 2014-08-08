@@ -2,6 +2,7 @@
 Universidad del Valle de Guatemala
 Hoja de Trabajo 3 
 Irene Molina 13480
+Jorge Garcia 13175
 Moises Urias 13015
  */
 
@@ -18,49 +19,65 @@ import java.util.StringTokenizer;
  * @author Irene
  */
 public class HojaDeTrabajo4 {
+     private static  Pila<String> implementacion; 
+     
+     public static void main(String[] args) {
+         /*La implementacion deseada*/
+   
+        /*Llamada al factory*/
+        StackFactory<String> sFactory = new StackFactory<String>();
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-        int opcion = Integer.parseInt(JOptionPane.showInputDialog("Elija la implementacion: 1. Listas encadenadas  2. StackArrayList  3.StackVector"));
-        
-        // si el usuario eligio listas encadenadas 
-        if(opcion==1){
-            int opcion2 = Integer.parseInt(JOptionPane.showInputDialog("1.Encadenada Simple  2.Encadenada Doble  3.Circular"));
-            //si el usuario eligio encadenada simple 
-            if(opcion2==1){
-                
-                
-            }
-            //si el usuario eligio encadenada doble 
-            if(opcion2==2){
-                
-            }
-            //si el usuario eligio circular 
-            if(opcion==3){
-                
-            }
-        }
        
-        if(opcion==2){
-            Pila<String> miStack= new StackArrayList<String>();
-            leerArchivo(miStack);
-        }
-        //si el usuario eligio StackVector 
-        if(opcion==3){
-            Pila<String> miStack= new StackVector<String>();
-            leerArchivo(miStack);
-        }
-           
-    }
         
+        /*Depende si el usuarion ingreso una opcion correcta o no*/
+        boolean incorrecta = true;
+        
+                
+        /*Se escoge la implentacion a utilizar, dependiendo de lo que ingrese
+        el usuario. El ciclo se repite hasta que el usuario ingrese una opcion
+        correcta.
+        
+        Esta parte del codigo solo crea una implentacion para ArrayList y Vector*/
+        while(incorrecta == true) 
+        {
+            /*El usuario escoge la implentacion que desea utilizar*/
+            int opcion1 = Integer.parseInt(JOptionPane.showInputDialog("1.ArrayList  2.StackVector  3.List"));
+
+        
+            switch (opcion1)
+            {
+                /*Si el usuario selecciono 1 o 2*/
+                case 1: /*Si el usuario escogio arraylist*/
+                case 2: /*Si el usuario escogio vector*/
+                case 3: /*Si el usuario escogio lista*/
+                {
+                    incorrecta = false; /*Sale del ciclo*/
+                    implementacion = sFactory.getStack(opcion1);
+                    break;
+                }
+                
+                
+                /*Si el usuario selecciono algo que no es valido*/
+                default:
+                {
+                    incorrecta = true;
+                    break;
+                }
+            }
+        }
+        System.out.println("Se ha salido del siclo DEBUG");
         // TODO code application logic here
+        
+        leerArchivo(implementacion);
+    }
     
-    //metodo para leer el archivo de texto 
-    public static void leerArchivo(Pila<String> miStack){
-    /*Declaracion de variables*/
+    
+//metodo para leer el archivo de texto 
+    public static void leerArchivo(Pila<String> imp){
+    
+         Pila<String> miStack = imp;
+       
+         /*Declaracion de variables*/
         String micadena = null;
         String linea=null;
         
@@ -71,6 +88,13 @@ public class HojaDeTrabajo4 {
         
         try
         {
+            /*Se crea un objeto que permite abrir el archivo de texto*/
+            AbrirJFileChooser abrirArchivo = new AbrirJFileChooser();
+            //abrirArchivo.Abrir(); /*Se slecciona el archivo de texto*/
+            //String ruta =abrirArchivo.getPath(); /*Se obtiene la ruta del
+                                                    //archivo de texto*/
+           
+            
             /*Lectura del archivo*/
             fr = new FileReader("datos.txt");
             br = new BufferedReader(fr);
@@ -160,7 +184,10 @@ public class HojaDeTrabajo4 {
         JOptionPane.showMessageDialog(null, "El resultado de las operaciones fue:\n" + moi, "Resultado", JOptionPane.INFORMATION_MESSAGE);
     }
     //metodo para leer el archivo
+
     
     
+  
     
 }
+  
