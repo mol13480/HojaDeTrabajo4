@@ -12,9 +12,16 @@ import java.util.Vector;
 
 /**
  *
- * @author Irene
+ * @author Irene Molina
  */
 public class StackVector<E> extends AbstractPila<E>{
+    
+    /**
+    * Este atributo se utiliza para implementar el patron de 
+    * diseño Singleton
+    */
+    public static final StackVector stackvector = new StackVector();
+    
     
     protected Vector<E> data;
 
