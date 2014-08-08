@@ -14,6 +14,7 @@ package hojadetrabajo4;
  * @author Irene
  */
 public class EncadenadaSimple<E> extends AbstractLista<E> {
+    public static final EncadenadaSimple encadenadaSimple = new EncadenadaSimple();
     protected int count; // list size
     protected Node<E> head; // ref. to first element
 

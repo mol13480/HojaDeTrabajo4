@@ -13,21 +13,21 @@ import javax.swing.JOptionPane;
  *
  * @author Samuel Urias
  */
-public class StackList<E> extends AbstractPila{
+public class StackList<E> extends AbstractPila<E>{
     
     /**
      * Este atributo se utiliza para implementar el patron de 
      * diseño Singleton
      */
     public static final StackList stacklist = new StackList();
-    private Lista<String> implementacion; 
+    protected Lista<E> implementacion; 
     /**
      * Constructor de la clase
     */
     private StackList()
     {
         /*Llamada al factory*/
-        ListFactory<String> lFactory = new ListFactory<String>();
+        ListFactory<E> lFactory = new ListFactory<E>();
 
        
         
@@ -69,28 +69,32 @@ public class StackList<E> extends AbstractPila{
         // TODO code application logic here
     }
 
-    
-    /*Medodos de la interface pila*/
-    //@Override
-    public void push(Object item) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //private boolean usado = false;
+    @Override
+    public void push(E item) {
+       implementacion.addLast(item);
     }
 
-    //@Override
-    public Object pop() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    @Override
+    public E pop() {
+        return implementacion.removeLast();
     }
 
-    //@Override
-    public Object peek() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
-    //@Override
+    @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return implementacion.size();
     }
+
+    @Override
+    public E peek() {
+        throw new UnsupportedOperationException("YOLO"); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
+    
+ 
     
     
 }

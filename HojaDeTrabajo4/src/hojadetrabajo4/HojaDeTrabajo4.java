@@ -65,7 +65,7 @@ public class HojaDeTrabajo4 {
                 }
             }
         }
-        System.out.println("Se ha salido del siclo DEBUG");
+        System.out.println("Se ha salido del ciclo DEBUG");
         // TODO code application logic here
         
         leerArchivo(implementacion);

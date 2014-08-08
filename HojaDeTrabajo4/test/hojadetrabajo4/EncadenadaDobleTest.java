@@ -76,10 +76,11 @@ public class EncadenadaDobleTest {
         System.out.println("removeLast");
         EncadenadaDoble instance = new EncadenadaDoble();
         instance.addFirst(String.valueOf(10));
-        instance.addLast(String.valueOf(15));
+        instance.addFirst(String.valueOf(15));
+        instance.addLast(String.valueOf(20)); 
         Object result = String.valueOf(instance.removeLast());
         Object expResult = String.valueOf(15);
-        System.out.println("add first: 10, add last: 15 / remove last:"+result);
+        System.out.println("add first: 10, add first: 15, add last: 20 / remove last:"+result);
     }
 
     /**

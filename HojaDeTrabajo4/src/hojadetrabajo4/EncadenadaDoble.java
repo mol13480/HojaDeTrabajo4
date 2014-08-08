@@ -12,6 +12,7 @@ package hojadetrabajo4;
  * @author Irene
  */
 public class EncadenadaDoble<E> extends AbstractLista<E> {
+    public static final EncadenadaDoble encadenadaDoble = new EncadenadaDoble();
     protected int count;
     protected DoubleLinkedNode<E> head;
     protected DoubleLinkedNode<E> tail;

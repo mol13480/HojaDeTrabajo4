@@ -13,28 +13,28 @@ package hojadetrabajo4;
  */
 public class ListFactory<E>{
     
-     public Lista<String> getLista(int entry)
+     public Lista<E> getLista(int entry)
     {
         /*La implementacion que se va a devolver*/
-        Lista<String> implementacion = null;
+        Lista<E> implementacion = null;
         
         /*Si se selecciona el numero 1, entonces se devuelve la implementacion
-        * StackArrayList*/
+        * Encadenada simple*/
         if (entry == 1)
         {
-            
+            implementacion = EncadenadaSimple.encadenadaSimple;
         }
         /*Si se selecciona el numero 2, entonces se devuelve la implementacion
-        * StackVector*/
+        * Encadenada doble*/
         else if(entry == 2)
         {
-            
+            implementacion = EncadenadaDoble.encadenadaDoble;
         }
         /*Si se selecciona el numero 3, entonces se devuelve la implementacion
-        * Encadenada simple*/
+        * Circular*/
         else if(entry == 3)
         {
-            
+            implementacion = Circular.circular;
         }
        
         
