@@ -26,7 +26,7 @@ public class StackFactory<E> {
      * @param entry es un numero con el patro que se desea utilizar
      * @return implementacion. Es la implementacion que se va utilizar
      */
-    public Pila<E> getStack(int entry)
+    public Pila<String> getStack(int entry)
     {
         /*La implementacion que se va a devolver*/
         Pila<String> implementacion = null;
@@ -41,26 +41,15 @@ public class StackFactory<E> {
         * StackVector*/
         else if(entry == 2)
         {
-            implementacion = new StackVector<E>();
+            implementacion = StackVector.stackvector;
         }
         /*Si se selecciona el numero 3, entonces se devuelve la implementacion
         * Encadenada simple*/
         else if(entry == 3)
         {
-            implementacion = new EncadenadaSimple<E>();
+            implementacion = StackList.stacklist;
         }
-        /*Si se selecciona el numero 3, entonces se devuelve la implementacion
-        * Encadenada Doble*/
-        else if(entry == 4)
-        {
-            implementacion = new EncadenadaDoble<E>();
-        }
-        /*Si se selecciona el numero 3, entonces se devuelve la implementacion
-        * Circular*/
-        else if(entry == 5)
-        {
-            implementacion = new Circular<E>();
-        }
+       
         
         /*Se devuelve la implementacion deseada*/
         return implementacion;

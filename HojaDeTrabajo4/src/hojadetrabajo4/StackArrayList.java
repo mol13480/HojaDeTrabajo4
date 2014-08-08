@@ -13,7 +13,14 @@ import java.util.ArrayList;
 
 public class StackArrayList<E> extends AbstractPila<E>
 {
-	protected ArrayList<E> data;
+    
+        /**
+        * Este atributo se utiliza para implementar el patron de 
+        * diseño Singleton
+        */
+        public static final StackArrayList stackarraylist = new StackArrayList();
+	
+        protected ArrayList<E> data;
 
 	public StackArrayList()
 	//post: constructs a new, empty stack

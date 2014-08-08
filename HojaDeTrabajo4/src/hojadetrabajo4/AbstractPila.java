@@ -13,11 +13,12 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Irene
+ * @author Irene Molina
  */
 public abstract class AbstractPila<E> implements Pila<E>{
    
-    public AbstractPila(){
+    public AbstractPila()
+    {
         
     } 
     public boolean empty()
