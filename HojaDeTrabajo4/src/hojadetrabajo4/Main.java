@@ -20,7 +20,7 @@ public class Main {
     /*La implementacion deseada*/
     private  Pila<String> implementacion; 
         
-     public void Main() {       
+     public Main() {       
         
         /*Llamada al factory*/
         StackFactory<String> sFactory = new StackFactory<String>();
@@ -47,45 +47,14 @@ public class Main {
                 /*Si el usuario selecciono 1 o 2*/
                 case 1: /*Si el usuario escogio arraylist*/
                 case 2: /*Si el usuario escogio vector*/
+                case 3: /*Si el usuario escogio lista*/
                 {
                     incorrecta = false; /*Sale del ciclo*/
                     implementacion = sFactory.getStack(opcion1);
                     break;
                 }
-                case 3: /*Si el usuario selecciona que quiere utilizar listas*/
-                {
-                    /*Se dice que lo que ingreso el usuario estubo bien*/
-                    incorrecta = false;
-                    
-                    /*Se le vuelve a solicitar al usuario que ingrese una
-                    opcion. Esta vez que tipo de lista desea implementar*/
-                    opcion1 = Integer.parseInt(JOptionPane.showInputDialog("1.Simplemente enlazadas  2.Doblemente enlazadas  3.Circular"));
-                    
-                    /*Si el usuario escogio una opcion correca se ejecuta, de 
-                    lo contrario se vuelve a iniciar el ciclo*/
-                    if (opcion1 == 1)
-                    {
-                        /*Lisa simplemente encadenada*/
-                        implementacion = sFactory.getStack(3);
-                    }
-                    else if (opcion1 == 2)
-                    {
-                        /*Lisa doblemente encadenada*/
-                        implementacion = sFactory.getStack(4);
-                    }
-                    else if (opcion1 == 3)
-                    {
-                        /*Lista circualr*/
-                        implementacion = sFactory.getStack(5);
-                    }
-                    else
-                    {
-                        /*Se dice que lo que ingreso el usuario estubo mal y se
-                        comienza de nuevo el ciclo*/
-                        incorrecta = true;
-                    }
-                    break;
-                }
+                
+                
                 /*Si el usuario selecciono algo que no es valido*/
                 default:
                 {
@@ -96,6 +65,8 @@ public class Main {
         }
         System.out.println("Se ha salido del siclo DEBUG");
         // TODO code application logic here
+        
+        leerArchivo(implementacion);
     }
     
     
@@ -115,8 +86,15 @@ public class Main {
         
         try
         {
+            /*Se crea un objeto que permite abrir el archivo de texto*/
+            AbrirJFileChooser abrirArchivo = new AbrirJFileChooser();
+            abrirArchivo.Abrir(); /*Se slecciona el archivo de texto*/
+            String ruta =abrirArchivo.getPath(); /*Se obtiene la ruta del
+                                                    archivo de texto*/
+           
+            
             /*Lectura del archivo*/
-            fr = new FileReader("datos.txt");
+            fr = new FileReader(ruta);
             br = new BufferedReader(fr);
             
             while ((micadena = br.readLine())!=null)
